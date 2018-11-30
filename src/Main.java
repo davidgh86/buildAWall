@@ -3,7 +3,7 @@ public class Main {
     public static final int NUMBER_MAXIMUM_OF_BRICKS = 1000;
 
     public static void main(String[] args) {
-        buildAWall(1, 1);
+        buildAWall(99, 10);
     }
 
     private static void buildAWall(int numberOfRows, int numberOfBricksPerRow){
@@ -11,8 +11,9 @@ public class Main {
             System.out.println("Invalid Parameters");
         }else if (tooMuchBricksNeeded(numberOfRows, numberOfBricksPerRow)){
             System.out.println("Naah, too much...here's my resignation");
+        }else {
+            printWall(numberOfRows, numberOfBricksPerRow);
         }
-        printWall(numberOfRows, numberOfBricksPerRow);
     }
 
     private static void printWall(int numberOfRows, int numberOfBricksPerRow) {
@@ -58,7 +59,5 @@ public class Main {
     private static boolean isOdd(int number) {
         return ((number%2)==1);
     }
-
-
-
+    
 }
